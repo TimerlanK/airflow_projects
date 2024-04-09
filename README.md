@@ -1,11 +1,13 @@
 # airflow user_processing project
-The project showcases a complete data pipeline flow, executing SQL queries, running Python functions, interfacing with APIs, using conditional sensors, leveraging hooks for database operations, and facilitating task communication through XComs.
+**dags/user_processing.py**
+</br>The project showcases a complete data pipeline flow, executing SQL queries, running Python functions, interfacing with APIs, using conditional sensors, leveraging hooks for database operations, and facilitating task communication through XComs.
 
 </br>![image](https://github.com/TimerlanK/airflow_user_processing_project/assets/59342509/b081886e-9a52-4884-919b-14834bb8d44f)
+</br>![image](https://github.com/TimerlanK/airflow_projects/assets/59342509/122604e5-061d-4bc8-bfa8-570f6fd9fb37)
+</br>![image](https://github.com/TimerlanK/airflow_projects/assets/59342509/58a2ddb2-d149-4dcd-a8af-ef681a79cdaf)
 
 **List of connections**
 </br>![image](https://github.com/TimerlanK/airflow_user_processing_project/assets/59342509/9e8ed32b-75a8-4238-9129-93e3506aaad9)
-
 
 **SQL Execution with PostgresOperator**
 </br>The create_table task demonstrates the use of PostgresOperator to run SQL statements, particularly creating a users table in the database, showcasing the integration of Airflow with PostgreSQL for database management.
@@ -24,5 +26,9 @@ The project showcases a complete data pipeline flow, executing SQL queries, runn
 
 **Data Exchange Between Tasks**
 </br>The pipeline features data exchange between tasks, with process_user retrieving data from extract_user via ti.xcom_pull. This exchange is further extended as processed data is saved and then picked up by another task for database storage, illustrating the XCom feature for tasks communication within Airflow.
+
+
+
+
 
 # airflow webparser__to_greenplum project
