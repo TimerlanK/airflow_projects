@@ -1,4 +1,4 @@
-# airflow user_processing project
+# user_processing project
 **dags/user_processing.py**
 </br>The project showcases a complete data pipeline flow, executing SQL queries, running Python functions, interfacing with APIs, using conditional sensors, leveraging hooks for database operations, and facilitating task communication through XComs.
 
@@ -32,6 +32,23 @@
 
 
 
-# airflow webparser__to_greenplum project
+# webparser_to_greenplum project
 **dags/parser_cbr_v2y.py**
+</br>The project automates the daily extraction of currency exchange rate data from the Central Bank of Russia, transforms it into a CSV format, and loads it into a Greenplum database using Apache Airflow.
+
+**Results**
 </br>![image](https://github.com/TimerlanK/airflow_projects/assets/59342509/84f38b07-dd51-499f-8d9a-a9f6eb3657b5)
+</br><img src="https://github.com/TimerlanK/airflow_projects/assets/59342509/1949cc01-ad33-46b0-8786-7f163f23cffc" width="700" height="250">
+
+
+**Dynamic URL Generation**
+</br>A Python function get_cbr_url dynamically generates the URL to fetch the XML data from the Central Bank of Russia's website, using the execution date of the DAG to retrieve the relevant day's exchange rates.
+
+**BashOperator for Data Retrieval and Preprocessing**
+</br>The export_cbr_xml task uses a BashOperator to check if an XML file already exists in the temporary directory and deletes it if present. It then downloads the XML data, converting it from Windows-1251 encoding to UTF-8, and saves it to /tmp.
+
+**XML to CSV Conversion**
+</br>The xml_to_csv task is a PythonOperator that reads the XML file, parses it, and converts the data into CSV format. It extracts relevant information such as currency codes, nominal values, and exchange rates for each currency, and logs this data for debugging purposes.
+
+**CSV Loading to Greenplum**
+</br>The load_csv_to_gp task also uses a PythonOperator to load the converted CSV data into the Greenplum database. It utilizes a PostgresHook configured with a Greenplum connection to execute a COPY command, efficiently loading the data into the specified table.
