@@ -2,10 +2,10 @@
 **dags/user_processing.py**
 </br>The project showcases a complete data pipeline flow, executing SQL queries, running Python functions, interfacing with APIs, using conditional sensors, leveraging hooks for database operations, and facilitating task communication through XComs.
 
-</br>![image](https://github.com/TimerlanK/airflow_user_processing_project/assets/59342509/b081886e-9a52-4884-919b-14834bb8d44f)
+**Results**
+</br>![image](https://github.com/TimerlanK/airflow_projects/assets/59342509/97bb2e78-ee21-4585-ad49-f4dd47da8b5e)
 </br>![image](https://github.com/TimerlanK/airflow_projects/assets/59342509/122604e5-061d-4bc8-bfa8-570f6fd9fb37)
 </br><img src="https://github.com/TimerlanK/airflow_projects/assets/59342509/58a2ddb2-d149-4dcd-a8af-ef681a79cdaf" width="700" height="250">
-
 
 **List of connections**
 </br>![image](https://github.com/TimerlanK/airflow_user_processing_project/assets/59342509/9e8ed32b-75a8-4238-9129-93e3506aaad9)
@@ -33,3 +33,5 @@
 
 
 # airflow webparser__to_greenplum project
+**dags/parser_cbr_v2y.py**
+</br>![image](https://github.com/TimerlanK/airflow_projects/assets/59342509/84f38b07-dd51-499f-8d9a-a9f6eb3657b5)
