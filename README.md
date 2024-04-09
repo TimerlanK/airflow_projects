@@ -4,7 +4,8 @@
 
 </br>![image](https://github.com/TimerlanK/airflow_user_processing_project/assets/59342509/b081886e-9a52-4884-919b-14834bb8d44f)
 </br>![image](https://github.com/TimerlanK/airflow_projects/assets/59342509/122604e5-061d-4bc8-bfa8-570f6fd9fb37)
-</br>![image](https://github.com/TimerlanK/airflow_projects/assets/59342509/58a2ddb2-d149-4dcd-a8af-ef681a79cdaf)
+</br><img src="https://github.com/TimerlanK/airflow_projects/assets/59342509/58a2ddb2-d149-4dcd-a8af-ef681a79cdaf" width="700" height="250">
+
 
 **List of connections**
 </br>![image](https://github.com/TimerlanK/airflow_user_processing_project/assets/59342509/9e8ed32b-75a8-4238-9129-93e3506aaad9)
