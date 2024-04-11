@@ -52,3 +52,19 @@
 
 **CSV Loading to Greenplum**
 </br>The load_csv_to_gp task also uses a PythonOperator to load the converted CSV data into the Greenplum database. It utilizes a PostgresHook configured with a Greenplum connection to execute a COPY command, efficiently loading the data into the specified table.
+
+
+# ricky and morty API
+**dags/ram_location.py**
+
+**Results**
+</br>![image](https://github.com/TimerlanK/airflow_projects/assets/59342509/7463b233-9776-4c1d-9a93-d2bf38812eeb)
+
+**Create a PostgreSQL Table in GreenPlum**
+</br>A table named t_kajyrmagambetov_ram_location is created if it does not already exist. This table is meant to store data fetched from an API, with columns for id, name, type, dimension, and resident count.
+
+**Fetch Data from the Rick and Morty API**
+</br>The script makes a GET request to the Rick and Morty API to retrieve information about different locations within the show's universe. It then processes this data to find the top 3 locations with the highest resident count. These top 3 locations are then serialized into JSON format to be passed along to the next task in the workflow.
+
+**Insert Data into the PostgreSQL Table**
+</br>This task takes the top 3 locations data from the previous task and inserts it into the t_kajyrmagambetov_ram_location table in the GreenPlum database. The connection to the database is managed by Airflow's PostgresHook.
