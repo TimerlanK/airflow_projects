@@ -56,9 +56,12 @@
 
 # ricky and morty API
 **dags/ram_location.py**
+</br>This project automates the extraction of the top three locations from the Rick and Morty API, then stores the results in a GreenPlum database, running daily with error handling and retries.
 
 **Results**
 </br>![image](https://github.com/TimerlanK/airflow_projects/assets/59342509/7463b233-9776-4c1d-9a93-d2bf38812eeb)
+</br>!![image](https://github.com/TimerlanK/airflow_projects/assets/59342509/e5003d01-8b30-4e48-ac00-c1106f63dedf)
+
 
 **Create a PostgreSQL Table in GreenPlum**
 </br>A table named t_kajyrmagambetov_ram_location is created if it does not already exist. This table is meant to store data fetched from an API, with columns for id, name, type, dimension, and resident count.
